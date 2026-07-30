@@ -237,7 +237,7 @@ if file_gambar is not None and tombol_prediksi:
         list_probabilitas = probabilities.cpu().numpy()
         data_pakar = DATABASE_REKOMENDASI[key_penyakit]
 
-  with st.container():
+    with st.container():
         st.markdown("<h3 style='color:#1b5e20; font-size:20px; font-weight:bold; margin-top:0px; margin-bottom:18px;'><i class='fa-solid fa-chart-bar' style='color:#2e7d32; margin-right:5px;'></i> Hasil Prediksi & Analisis Pakar</h3>", unsafe_allow_html=True)
         
         kol_res_img, kol_res_utama, kol_res_prob = st.columns([1, 1.1, 1.3])
@@ -261,11 +261,12 @@ if file_gambar is not None and tombol_prediksi:
             st.markdown("<b style='font-size:15px; display:block; margin-bottom:8px;'><i class='fa-solid fa-clock' style='color:#2e7d32; margin-right:5px;'></i> Probabilitas Setiap Kelas</b>", unsafe_allow_html=True)
             for nama_kelas, prob in zip(class_names, list_probabilitas):
                 nama_tampilan = DATABASE_REKOMENDASI[nama_kelas]['nama_penyakit']
-                st.markdown(f"<p style='color: #111111 !important; font-size:14.5px !important; font-weight:bold !important; margin-bottom:2px;'>{nama_tampilan} : {prob:.2f}%</p>", unsafe_allow_html=True)
+                st.markdown(f"<div style='font-size:14.5px !important; font-weight:500; margin-bottom:1px;'><b>{nama_tampilan}</b> : {prob:.2f}%</div>", unsafe_allow_html=True)
                 st.progress(float(prob / 100))
-                
+
         st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("<h4 style='color:#1b5e20; font-size:17.5px; font-weight:bold; margin-bottom:14px;'><i class='fa-solid fa-file-invoice' style='color:#2e7d32; margin-right:5px;'></i> Panduan Penanganan & Solusi Pakar Berdasarkan Rekomendasi:</h4>", unsafe_allow_html=True)
+        
         kol_s1, kol_s2, kol_s3 = st.columns(3)
         
         with kol_s1:
