@@ -1,0 +1,78 @@
+{
+  "Black Rot": {
+    "nama_penyakit": "Black Rot (Busuk Hitam)",
+    "penyebab": "Jamur Guignardia bidwellii",
+    "tindakan": [
+      "Pangkas Segera: Potong daun, ranting, atau buah yang bergejala bercak hitam.",
+      "Pemberantasan Spora: Kumpulkan limbah potongan tersebut lalu bakar di luar area kebun.",
+      "Tujuan: Menghentikan spora jamur aktif agar tidak menular ke tanaman sehat lain."
+    ],
+    "pencegahan": [
+      "Sirkulasi Udara: Lakukan pemangkasan kanopi rutin agar kebun mendapat sinar matahari optimal.",
+      "Sanitasi Lahan: Bersihkan sisa-sisa daun rontok musim lalu di sekitar perakaran.",
+      "Tujuan: Mengurangi tingkat kelembapan yang memicu pertumbuhan spora jamur baru."
+    ],
+    "obat": [
+      "Fungisida Kontak: Dithane M-45 atau Antracol 70 WP (Dosis: 2 gram per liter air).",
+      "Fungisida Sistemik: Score 250 EC (Dosis: 0.5 ml per liter air) jika infeksi meluas.",
+      "Waktu Semprot: Setiap 7 hari sekali pada pagi hari sebelum matahari terlalu terik."
+    ]
+  },
+  "ESCA": {
+    "nama_penyakit": "ESCA (Black Measles)",
+    "penyebab": "Kompleks Jamur Cendawan Kayu",
+    "tindakan": [
+      "Pemotongan Batang: Pangkas cabang/batang bergaris hitam internal hingga ke bagian kayu sehat.",
+      "Sterilisasi Alat: Bersihkan gunting atau gergaji pangkas menggunakan alkohol setelah memotong.",
+      "Tujuan: Mencegah sisa jamur di alat kerja menular ke pohon anggur lainnya."
+    ],
+    "pencegahan": [
+      "Hindari Cuaca Basah: Jangan melakukan pemangkasan besar saat hari hujan atau kelembapan tinggi.",
+      "Perlindungan Luka: Lapisi setiap luka bekas pangkasan besar dengan pasta fungisida atau lilin.",
+      "Tujuan: Menutup pintu masuk spora jamur kayu pada luka terbuka tanaman."
+    ],
+    "obat": [
+      "Fungisida Batang: Topsin M 70 WP atau Amistartop 325 SC (Dosis: 1 ml per liter air).",
+      "Metode Khusus: Kuaskan larutan pekat Topsin langsung pada luka bekas pangkasan batang.",
+      "Sterilisasi Tanah: Kocor area perakaran dengan agen hayati Trichoderma untuk pemulihan tanah."
+    ]
+  },
+  "Healthy": {
+    "nama_penyakit": "Healthy (Tanaman Sehat)",
+    "penyebab": "Tidak Ada (Kondisi Optimal)",
+    "tindakan": [
+      "Pemantauan Rutin: Lakukan cek visual seminggu sekali pada area daun-daun muda.",
+      "Fokus Cek: Perhatikan bagian bawah daun untuk memastikan tidak ada tanda bercak dini.",
+      "Tujuan: Deteksi dini apabila ada indikasi serangan hama atau penyakit sejak awal."
+    ],
+    "pencegahan": [
+      "Nutrisi Seimbang: Berikan pemupukan teratur sesuai fase pertumbuhan tanaman.",
+      "Manajemen Air: Atur sistem irigasi atau penyiraman agar tanah tidak terlalu becek.",
+      "Tujuan: Menjaga kekokohan struktur tanaman dan mencegah pembusukan akar akibat air menggenang."
+    ],
+    "obat": [
+      "Pupuk Daun: Gandasil D (fase vegetatif) atau Gandasil B (fase generatif) dosis 1 gram per liter air.",
+      "Anti Stres: Tambahkan Vitamin B1 Liquinox (Dosis: 0.5 ml per liter air) jika cuaca ekstrem.",
+      "Rutin: Semprotkan 2 minggu sekali untuk menjaga imun dan merangsang fotosintesis."
+    ]
+  },
+  "Leaf Blight": {
+    "nama_penyakit": "Leaf Blight (Hawar Daun)",
+    "penyebab": "Jamur Isariopsis clavispora",
+    "tindakan": [
+      "Sanitasi Daun: Segera rontokkan dan kumpulkan daun yang berbercak hawar kecokelatan parah.",
+      "Isolasi Sumber: Buang daun rontok tersebut jauh dari kebun agar tidak menerbangkan spora baru.",
+      "Tujuan: Melindungi area daun muda bagian atas agar tidak tertular hawar dari daun bawah."
+    ],
+    "pencegahan": [
+      "Ubah Sistem Siram: Hindari menyiram langsung dari atas daun (overhead) pada sore/malam hari.",
+      "Metode Irigasi: Gunakan irigasi tetes langsung ke tanah untuk menjaga permukaan daun tetap kering.",
+      "Tujuan: Menghilangkan kondisi basah pada daun yang disukai jamur hawar untuk berkembang."
+    ],
+    "obat": [
+      "Fungisida Utama: Tembaga Kocide 54 WD atau Cupravit (Dosis: 2 gram per liter air).",
+      "Alternatif Kontak: Daconil 75 WP atau Copcide (Dosis: 1.5 gram per liter air).",
+      "Target Semprot: Semprotkan berfokus pada sisi bawah daun dengan interval 5-7 hari sekali."
+    ]
+  }
+}
