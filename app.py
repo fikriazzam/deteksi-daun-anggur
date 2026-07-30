@@ -58,10 +58,10 @@ st.markdown(f"""
         object-fit: contain;
     }}
     
-   p, span, label, .stMarkdown p, [data-testid="stMarkdownContainer"] * {{
+    p, span, label, .stMarkdown p, [data-testid="stMarkdownContainer"] * {{
         font-size: 15.5px !important; 
         line-height: 1.6 !important;
-        color: #111111 !important;
+        color: #222222 !important;
     }}
     
     .info-box-premium {{
@@ -261,18 +261,29 @@ if file_gambar is not None and tombol_prediksi:
             st.markdown("<b style='font-size:15px; display:block; margin-bottom:8px;'><i class='fa-solid fa-clock' style='color:#2e7d32; margin-right:5px;'></i> Probabilitas Setiap Kelas</b>", unsafe_allow_html=True)
             for nama_kelas, prob in zip(class_names, list_probabilitas):
                 nama_tampilan = DATABASE_REKOMENDASI[nama_kelas]['nama_penyakit']
-                st.markdown(f"<div style='font-size:14.5px !important; font-weight:500; margin-bottom:1px;'><b>{nama_tampilan}</b> : {prob:.2f}%</div>", unsafe_allow_html=True)
+                st.markdown(f"<div style='color: #111111 !important; font-size:14.5px !important; font-weight:bold !important; margin-bottom:2px;'>{nama_tampilan} : {prob:.2f}%</div>", unsafe_allow_html=True)
                 st.progress(float(prob / 100))
 
-       st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("<h4 style='color:#1b5e20; font-size:17.5px; font-weight:bold; margin-bottom:14px;'><i class='fa-solid fa-file-invoice' style='color:#2e7d32; margin-right:5px;'></i> Panduan Penanganan & Solusi Pakar Berdasarkan Rekomendasi:</h4>", unsafe_allow_html=True)
         
-        # Format list dari JSON menjadi elemen list HTML (bullet points)
-        tindakan_html = "".join([f"<li style='margin-bottom:8px;'>{item}</li>" for item in data_pakar['tindakan']])
-        pencegahan_html = "".join([f"<li style='margin-bottom:8px;'>{item}</li>" for item in data_pakar['pencegahan']])
-        
-        list_obat = data_pakar.get('obtain', data_pakar.get('obat', []))
-        obat_html = "".join([f"<li style='margin-bottom:8px;'>{item}</li>" for item in list_obat])
+        tindakan_list = data_pakar.get('tindakan', [])
+        if isinstance(tindakan_list, list):
+            tindakan_html = "".join([f"<li style='margin-bottom:8px;'>{item}</li>" for item in tindakan_list])
+        else:
+            tindakan_html = f"<li>{tindakan_list}</li>"
+            
+        pencegahan_list = data_pakar.get('pencegahan', [])
+        if isinstance(pencegahan_list, list):
+            pencegahan_html = "".join([f"<li style='margin-bottom:8px;'>{item}</li>" for item in pencegahan_list])
+        else:
+            pencegahan_html = f"<li>{pencegahan_list}</li>"
+            
+        obat_list = data_pakar.get('obtain', data_pakar.get('obat', []))
+        if isinstance(obat_list, list):
+            obat_html = "".join([f"<li style='margin-bottom:8px;'>{item}</li>" for item in obat_list])
+        else:
+            obat_html = f"<li>{obat_list}</li>"
         
         kol_s1, kol_s2, kol_s3 = st.columns(3)
         
@@ -280,7 +291,7 @@ if file_gambar is not None and tombol_prediksi:
             st.markdown(f"""
                 <div class="card-solusi-pakar" style="border-top: 4px solid #d32f2f;">
                     <h5 style="color:#d32f2f !important;"><i class="fa-solid fa-triangle-exclamation" style="color:#d32f2f; margin-right:5px;"></i> Tindakan Darurat Pengendalian:</h5>
-                    <ul style="padding-left:18px; margin:0; font-size:14px; color:#444444; line-height:1.5;">
+                    <ul style="padding-left:18px; margin:0; font-size:14px; color:#333333; line-height:1.5;">
                         {tindakan_html}
                     </ul>
                 </div>
@@ -290,7 +301,7 @@ if file_gambar is not None and tombol_prediksi:
             st.markdown(f"""
                 <div class="card-solusi-pakar" style="border-top: 4px solid #2e7d32;">
                     <h5 style="color:#2e7d32 !important;"><i class="fa-solid fa-shield-virus" style="color:#2e7d32; margin-right:5px;"></i> Langkah Pencegahan (Preventif):</h5>
-                    <ul style="padding-left:18px; margin:0; font-size:14px; color:#444444; line-height:1.5;">
+                    <ul style="padding-left:18px; margin:0; font-size:14px; color:#333333; line-height:1.5;">
                         {pencegahan_html}
                     </ul>
                 </div>
@@ -300,7 +311,7 @@ if file_gambar is not None and tombol_prediksi:
             st.markdown(f"""
                 <div class="card-solusi-pakar" style="border-top: 4px solid #1976d2;">
                     <h5 style="color:#1976d2 !important;"><i class="fa-solid fa-flask-vial" style="color:#1976d2; margin-right:5px;"></i> Rekomendasi Agrokimia / Pengobatan:</h5>
-                    <ul style="padding-left:18px; margin:0; font-size:14px; color:#444444; line-height:1.5;">
+                    <ul style="padding-left:18px; margin:0; font-size:14px; color:#333333; line-height:1.5;">
                         {obat_html}
                     </ul>
                 </div>
