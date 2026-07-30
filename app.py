@@ -58,11 +58,11 @@ st.markdown(f"""
         object-fit: contain;
     }}
     
-    p, span, label, .stMarkdown p {{
+   p, span, label, div, .stMarkdown p, .stMarkdown div {
         font-size: 15.5px !important; 
         line-height: 1.6 !important;
-        color: #444444;
-    }}
+        color: #111111 !important;
+    }
     
     .info-box-premium {{
         background-color: #ffffff;
