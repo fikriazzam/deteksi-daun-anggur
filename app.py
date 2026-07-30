@@ -262,11 +262,10 @@ if file_gambar is not None and tombol_prediksi:
             for nama_kelas, prob in zip(class_names, list_probabilitas):
                 nama_tampilan = DATABASE_REKOMENDASI[nama_kelas]['nama_penyakit']
                 st.markdown(f"<div style='color: #1e1e1e !important; font-size:14.5px !important; font-weight:500; margin-bottom:1px;'><b>{nama_tampilan}</b> : {prob:.2f}%</div>", unsafe_allow_html=True)
-    st.progress(float(prob / 100))
+                st.progress(float(prob / 100))
 
         st.markdown("<br>", unsafe_allow_html=True)
         st.markdown("<h4 style='color:#1b5e20; font-size:17.5px; font-weight:bold; margin-bottom:14px;'><i class='fa-solid fa-file-invoice' style='color:#2e7d32; margin-right:5px;'></i> Panduan Penanganan & Solusi Pakar Berdasarkan Rekomendasi:</h4>", unsafe_allow_html=True)
-        
         kol_s1, kol_s2, kol_s3 = st.columns(3)
         
         with kol_s1:
