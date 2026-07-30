@@ -61,7 +61,7 @@ st.markdown(f"""
   p, span, label, .stMarkdown p {{
         font-size: 15.5px !important; 
         line-height: 1.6 !important;
-        color: #444444;
+        color: #1b5e20;
     }}
     
     .info-box-premium {{
